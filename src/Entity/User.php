@@ -51,48 +51,48 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
-    public function getnom(): ?string
+    public function getNom(): ?string
     {
         return $this->nom;
     }
 
-    public function setnom(string $nom): static
+    public function setNom(string $nom): static
     {
         $this->nom = $nom;
 
         return $this;
     }
 
-    public function getprenom(): ?string
+    public function getPrenom(): ?string
     {
         return $this->prenom;
     }
 
-    public function setprenom(string $prenom): static
+    public function setPrenom(string $prenom): static
     {
         $this->prenom = $prenom;
 
         return $this;
     }
 
-    public function GetraisonSocial(): ?string
+    public function getRaisonSocial(): ?string
     {
         return $this->raisonSocial;
     }
 
-    public function setraisonSocial(string $raisonSocial): static
+    public function setRaisonSocial(string $raisonSocial): static
     {
         $this->raisonSocial = $raisonSocial;
 
         return $this;
     }
     
-    public function getiban(): ?string
+    public function getIban(): ?string
     {
         return $this->iban;
     }
 
-    public function setiban(string $iban): static
+    public function setIban(string $iban): static
     {
         $this->iban = $iban;
 
