@@ -5,22 +5,21 @@
 {% block body %}
     <section class="bg-[#F9FAFB] flex justify-center items-center h-screen">
         <div class="bg-white flex flex-col items-center gap-1.5 px-6 py-6 shadow">
-            <img src="{{asset("/svg/Icon.svg")}}"/>
+            <img src="{{asset("/svg/registration-login/Icon.svg")}}"/>
             <h1 class="text-4xl font-bold">Créez votre compte</h1>
 
             <div class="flex gap-1.5">
                 <p>Ou</p>
                 <a href="{{path("app_login")}}" class="text-[#155DFC]">connectez-vous à votre compte</a>
             </div>
-
+            {{ form_errors(registrationForm) }}
             {{ form_start(registrationForm) }}
-                {{ form_errors(registrationForm) }}
                 <div class="flex justify-between gap-2.5 py-2">
                     <div class="flex flex-col">
                         {{ form_label(registrationForm.prenom)}}
                         {{ form_widget(registrationForm.prenom,{attr:{placeholder:"  Prenom", class:"border-[#D1D5DC] border w-31 h-8 rounded-lg shadow"}})}}
                     </div>
-
+                    
                     <div class="flex flex-col">
                         {{ form_label(registrationForm.nom)}}
                         {{ form_widget(registrationForm.nom,{attr:{placeholder:"  Nom", class:"border-[#D1D5DC] border w-31 h-8 rounded-lg shadow"}})}}    
@@ -32,7 +31,7 @@
                         {{ form_label(registrationForm.raisonSocial)}}
                         {{ form_widget(registrationForm.raisonSocial,{attr:{placeholder:"  raisonSocial", class:"border-[#D1D5DC] border w-62 h-8 rounded-lg shadow"}})}}
                     </div>
-                            
+                    
                     <div class="flex flex-col">
                         {{ form_label(registrationForm.iban)}}
                         {{ form_widget(registrationForm.iban,{attr:{placeholder:"  FR76 1234 5678 9012 3456 7890 123", class:"border-[#D1D5DC] border w-62 h-8 rounded-lg shadow"}})}}
@@ -40,20 +39,17 @@
                     
                     <div class="flex flex-col">
                         {{ form_label(registrationForm.email)}}
-                        {{ form_widget(registrationForm.email,{attr:{placeholder:"  contact@entreprise.fr", class:"border-[#D1D5DC] border w-62 h-8 rounded-lg shadow"}})}}
+                        {{ form_widget(registrationForm.email,{attr:{placeholder:"  bontact@entreprise.fr", class:"border-[#D1D5DC] border w-62 h-8 rounded-lg shadow"}})}}
                     </div>
-
+                    
                     <div class="flex flex-col">
                         {{ form_label(registrationForm.plainPassword)}}
                         {{ form_widget(registrationForm.plainPassword,{attr:{placeholder:"  Password", class:"border-[#D1D5DC] border w-62 h-8 rounded-lg shadow"}})}}
                     </div>
-
+                    
                     <button type="submit" class="flex flex-col items-center justify-center text-cyan-50 bg-[#155DFC] w-62 h-8 rounded-lg shadow">Register</button>
                 </div>
-
-
-                    
-            {{ form_end(registrationForm) }}
+            {{form_end(registrationForm)}}
         </div>
     </section>
 {% endblock %}

@@ -36,7 +36,7 @@ class RegistrationFormType extends AbstractType
                     ),
                     new Length(
                         min: 34,
-                        minMessage: 'Your password should be at least {{ limit }} characters',
+                        minMessage: 'Your IBAN should be at least {{ limit }} characters',
                         max: 34,
                     ),
                 ],

@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <section class="flex h-screen">
+        
+        <div class="flex flex-col flex-1">
+            <div class="flex items-center px-3 bg-amber-300">
+                <img class="" src="{{asset("/svg/registration-login/Icon.svg")}}"/>
+                <p class="font-bold size-5 flex items-center text-[#155DFC]">FacturSaaS</p>
+            </div>
+            
+                <div class="flex flex-col gap-y-164">
+                    <div class="flex flex-col gap-y-1.5 bg-amber-500">
+                        <div class="flex px-3.5 gap-1.5">
+                            <img src="{{asset("/svg/Icon1.svg")}}"/>
+                            <button class="text-[#4A5565]">Dashboard</button>
+                        </div>
+
+                        <div class="flex px-3.5 gap-1.5">
+                            <img src="{{asset("/svg/Icon2.svg")}}"/>
+                            <button class="text-[#4A5565]">Factures</button>
+                        </div>
+                        
+                        <div class="flex px-3.5 gap-1.5">
+                            <img src="{{asset("/svg/Icon3.svg")}}"/>
+                            <button class="text-[#4A5565]">Clients</button>
+                        </div>
+                    
+                        <div class="flex px-3.5 gap-1.5">
+                            <img src="{{asset("/svg/Icon4.svg")}}"/>
+                            <button class="text-[#4A5565]">Produit</button>
+                        </div>
+
+                        <div class="flex px-3.5 gap-1.5">
+                            <img src="{{asset("/svg/Icon5.svg")}}"/>
+                            <button class="text-[#4A5565]">Profil</button>
+                        </div>              
+                    </div>
+                
+                    <div class="flex flex-col bg-red-700 gap-2.5 px-3.5">
+
+                            <a href="" class="flex >
+                                <p class="w-12 aspect-square flex bg-[#DBEAFE] justify-center items-center rounded-3xl text-[#1447E6]">
+                                    {{name | first}}
+                                    {{lastname | first}}
+                                </p>
+                                <div class="flex flex-col justify-center">
+                                    <p>{{name}} {{lastname}}</p>
+                                    <p>{{email}}</p>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center">
+                                <img src="{{asset("/svg/Icon6.svg")}}" alt=""/>
+                                <a href="">Déconnexion</a>
+                            </div>
+                            
+                    </div>
+                </div>
+        </div>
+
+        <div class="content flex-9 py-2 px-12 flex flex-col bg-[#E5E7EB]">
+            
+            <h1 class="heading font-bold text-3xl">Dashboard</h1>
+
+            
+            <div class=" stats flex py-5 gap-14">
+
+                <div class="bg-[#FFFFFF] text-[#6A7282] px-8 py-8 rounded-3xl flex flex-col">
+                    <a href="">
+                        <img src="{{asset("/svg/Dashboard/Icon1.svg")}}" alt="">
+                        <p>Chiffre d'affaires (Payé)</p>
+                        <p></p>
+                    </a>
+                </div>
+                
+                <div class="bg-[#FFFFFF] text-[#6A7282] px-8 py-8 rounded-3xl flex flex-col">
+                    <a href="">
+                        <img src="{{asset("/svg/Dashboard/Icon2.svg")}}" alt="">
+                        <p>Factures en attente de paiement</p>
+                        <p></p>
+                    </a>
+                </div>
+
+                <div class="bg-[#FFFFFF] text-[#6A7282] px-8 py-8 rounded-3xl flex flex-col">
+                    <a href="">
+                        <img src="{{asset("/svg/Dashboard/Icon3.svg")}}" alt="">
+                        <p>Total Clients</p>
+                        <p></p>
+                    </a>
+                </div>
+
+                <div class="bg-[#FFFFFF] text-[#6A7282] px-8 py-8 rounded-3xl flex flex-col">
+                    <a href="">
+                        <img src="{{asset("/svg/Dashboard/Icon4.svg")}}" alt="">
+                        <p>Total Produits</p>
+                        <p></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="chart flex  bg-[#FFFFFF] px-8 py-8 rounded-3xl flex-col ">
+                <p class="font-bold text-2xl">Chiffre d'affaires mensuel (Factures payées)</p>
+                <img src="{{asset("/svg/Dashboard/BarChart.png")}}" class="w-70/100">
+            </div>
+
+            <div class="ctas  flex  py-5 justify-start flex-wrap gap-6">
+            
+                <div class="bg-[#FFFFFF] p-6 border-[#E5E7EB] border text-[#101828] justify-center items-center rounded-3xl flex flex-col">
+                    <a href="" class="flex items-center justify-center gap-27">
+                        <div>
+                            <p>Créer une facture (Payé)</p>
+                            <p>Nouvelle prestation</p>
+                        </div>
+                        <img src="{{asset("/svg/Dashboard/Icon5.svg")}}" alt="">
+                    </a>
+                </div>
+            
+                <div class="bg-[#FFFFFF] p-6 border-[#E5E7EB] border text-[#101828] justify-center items-center  rounded-3xl flex flex-col">
+                    <a href="" class="flex items-center justify-center gap-27">
+                        <div>
+                            <p>Ajouter un client</p>
+                            <p>Gérer le répertoire</p>
+                        </div>
+                        <img src="{{asset("/svg/Dashboard/Icon5.svg")}}" alt="">
+                    </a>
+                </div>
+            
+                <div class="bg-[#FFFFFF] p-6 border-[#E5E7EB] border text-[#101828] justify-center items-center  rounded-3xl flex flex-col">
+                    <a href="" class="flex items-center justify-center gap-12">
+                        <div>    
+                            <p>Créer un produit / service</p>
+                            <p>Enrichir le catalogue pour rediger rapidement vos factures</p>
+                        </div>
+                        <img src="{{asset("/svg/Dashboard/Icon5.svg")}}" alt="">
+                    </a>
+                </div>
+            
+                <div class="bg-[#FFFFFF] p-6 border-[#E5E7EB] border text-[#101828] justify-center items-center rounded-3xl flex flex-col">
+                    <a href="" class="flex items-center justify-center gap-12">
+                        <div>
+                            <p>Relancer tous les clients</p>
+                            <p>Envoyer un mail à tout les clients en retard de paiement</p>
+                        </div>
+                        <img src="{{asset("/svg/Dashboard/Icon5.svg")}}" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

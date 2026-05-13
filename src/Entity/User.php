@@ -31,7 +31,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180)]
     private ?string $raisonSocial = null;
 
-    #[ORM\Column(length: 34)]
+    #[ORM\Column(length: 255)] // provoke 422 status http error  !!!!!!!!!!!!! 
     private ?string $iban = null;
 
     /**
