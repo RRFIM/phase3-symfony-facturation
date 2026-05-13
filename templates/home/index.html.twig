@@ -5,46 +5,46 @@
 {% block body %}
     <section class="flex h-screen">
         
-        <div class="flex flex-col flex-1">
-            <div class="flex items-center px-3 bg-amber-300">
-                <img class="" src="{{asset("/svg/registration-login/Icon.svg")}}"/>
-                <p class="font-bold size-5 flex items-center text-[#155DFC]">FacturSaaS</p>
-            </div>
+        <div class="flex flex-col flex-2">
+                <a href="" class="flex justify-center items-center">
+                    <img src="{{asset("/svg/registration-login/Icon.svg")}}"/>
+                    <p class="font-bold text-5 flex items-center text-[#155DFC]">FacturSaaS</p>
+                </a>
             
-                <div class="flex flex-col gap-y-164">
-                    <div class="flex flex-col gap-y-1.5 bg-amber-500">
-                        <div class="flex px-3.5 gap-1.5">
-                            <img src="{{asset("/svg/Icon1.svg")}}"/>
-                            <button class="text-[#4A5565]">Dashboard</button>
-                        </div>
+                <div class="flex flex-col gap-y-164 items-center ">
+                    <div class="flex flex-col gap-y-1.5 bg-ambr-500">            
+                        <a href="" class="flex px-3.5 gap-1.5 bg-blue-200 rounded-3xl">
+                            <img src="{{asset("/svg/Dashboard/DashboardIcon.svg")}}"/>
+                            <button class="text-[#1447E6]">Dashboard</button>
+                        </a>
 
-                        <div class="flex px-3.5 gap-1.5">
+                        <a href="" class="flex px-3.5 gap-1.5">    
                             <img src="{{asset("/svg/Icon2.svg")}}"/>
                             <button class="text-[#4A5565]">Factures</button>
-                        </div>
+                        </a>
                         
-                        <div class="flex px-3.5 gap-1.5">
+                        <a href="" class="flex px-3.5 gap-1.5"> 
                             <img src="{{asset("/svg/Icon3.svg")}}"/>
                             <button class="text-[#4A5565]">Clients</button>
-                        </div>
+                        </a>
                     
-                        <div class="flex px-3.5 gap-1.5">
+                        <a href="" class="flex px-3.5 gap-1.5">
                             <img src="{{asset("/svg/Icon4.svg")}}"/>
                             <button class="text-[#4A5565]">Produit</button>
-                        </div>
+                        </a>
 
-                        <div class="flex px-3.5 gap-1.5">
+                        <a href="" class="flex px-3.5 gap-1.5">
                             <img src="{{asset("/svg/Icon5.svg")}}"/>
                             <button class="text-[#4A5565]">Profil</button>
-                        </div>              
+                        </a>
                     </div>
                 
-                    <div class="flex flex-col bg-red-700 gap-2.5 px-3.5">
+                    <div class="flex flex-col gap-2.5 px-3.5 border-[#E5E7EB] border">
 
-                            <a href="" class="flex >
+                            <a href="" class="flex">
                                 <p class="w-12 aspect-square flex bg-[#DBEAFE] justify-center items-center rounded-3xl text-[#1447E6]">
-                                    {{name | first}}
-                                    {{lastname | first}}
+                                    {{name| first}}
+                                    {{lastname| first}}
                                 </p>
                                 <div class="flex flex-col justify-center">
                                     <p>{{name}} {{lastname}}</p>
